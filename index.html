@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+  </head>
+  <body >
+    <div class="page">
+      <div class="container">
+        <!-- headers -->
+        <div class="header">
+          <div class="icon-logo only-dark">
+            <img src="./assets/images/logo.svg" alt="" />
+          </div>
+          <div class="icon-mode "  id="theme">
+            <img src="assets/images/icon-moon.svg" class="moon" alt="" />
+            <img src="assets/images/icon-sun.svg" class="sun" alt="" />
+          </div>
+        </div>
+        <!-- list -->
+        <div class="list">
+          <h1>Extensions List</h1>
+          <div class="list-ul">
+            <ul>
+              <li id="active">
+                <a class="active all" href="">All</a>
+              </li>
+              <li>
+                <a href="" class="active-filter">Active</a>
+              </li>
+              <li>
+                <a href="" class="in-active">Inactive</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="body-list" id="myRow">
+    
+        </div>
+      </div>
+      
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    </div>
+
+    <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+
+
+
+    <script src="java/script.js"></script>
+  </body>
+</html>

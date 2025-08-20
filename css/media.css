@@ -1,0 +1,31 @@
+/* sm */
+@media screen and (min-width: 640px){
+
+}
+/* md */
+@media screen and (min-width: 768px){
+.body-list .col {
+  width: calc((100% - 20px) /2 );
+}
+.list {
+  flex-flow: row wrap;
+}
+} 
+/* lg */
+@media screen and (min-width: 1024px){
+  .container {
+    width: 75%;
+  }
+.body-list .col {
+  width: calc((100% - 20px) / 3);
+}
+
+/* xl */
+@media screen and (min-width: 1280px){
+}
+
+/* 2xl */
+@media screen and (min-width: 1536px){
+    
+}
+}
