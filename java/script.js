@@ -1,7 +1,7 @@
 let myRow = document.querySelector("#myRow");
 let theme = document.querySelector("#theme");
 let btnSubmit = document.querySelector("#btnSubmit");
-let btnClose = document.querySelector(".btn-close");
+let btnClose = document.querySelectorAll(".btn-close");
 let modal = document.querySelector(".modal");
 let iconLogo = document.querySelector(".icon-logo");
 let listOfAncour = document.querySelectorAll(".list a");
@@ -105,9 +105,12 @@ function handleConfirm(i) {
   currentIndex = i;
 }
 // close modal
-btnClose.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+for (let i = 0; i < btnClose.length; i++) {
+  btnClose[i].addEventListener("click", () => {
+    modal.style.display = "none";
+    
+  });
+}
 // delete
 btnSubmit.addEventListener("click", function () {
   handleDelete(currentIndex);
