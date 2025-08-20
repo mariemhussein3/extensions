@@ -354,14 +354,19 @@ input:checked + .slider:before {
 .modal {
   position: fixed;
   display: none;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  /* transform: translateX(-50%); */
 }
 .box-modal {
   background-color: white;
   padding: 30px 40px;
   display: flex;
+/* width: 50%; */
   align-items: start;
   justify-content: center;
   flex-flow: column wrap;

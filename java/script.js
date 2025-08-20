@@ -2,7 +2,7 @@ let myRow = document.querySelector("#myRow");
 let theme = document.querySelector("#theme");
 let btnSubmit = document.querySelector("#btnSubmit");
 let btnClose = document.querySelectorAll(".btn-close");
-let modal = document.querySelector(".modal");
+let modal = document.querySelector("#modal");
 let iconLogo = document.querySelector(".icon-logo");
 let listOfAncour = document.querySelectorAll(".list a");
 let data = [];
@@ -19,7 +19,6 @@ async function getData() {
     data = await respone.json();
     localStorage.setItem("data", JSON.stringify(data));
     displayCards(data);
-    // console.log(data);
   } catch (err) {
     console.log(err);
   }
@@ -84,7 +83,6 @@ function handleSwitch(i, input) {
   displayCards(data);
   localStorage.setItem("data", JSON.stringify(data));
 
-  console.log(input.checked);
 }
 
 // theme
@@ -101,22 +99,28 @@ theme.addEventListener("click", function () {
 
 // open modal
 function handleConfirm(i) {
-  modal.style.display = "block";
+  modal.style.display = "flex";
   currentIndex = i;
 }
 // close modal
 for (let i = 0; i < btnClose.length; i++) {
   btnClose[i].addEventListener("click", () => {
-    modal.style.display = "none";
-    
+    handleCloseModal();
   });
 }
+function handleCloseModal() {
+  modal.style.display = "none";
+}
+modal.addEventListener("click", function (e) {
+  if(e.target.getAttribute("id")=="modal"){
+    handleCloseModal();
+  }
+});
 // delete
 btnSubmit.addEventListener("click", function () {
   handleDelete(currentIndex);
 });
 function handleDelete(currentIndex) {
-  console.log(currentIndex);
 
   data.splice(currentIndex, 1);
   modal.style.display = "none";
